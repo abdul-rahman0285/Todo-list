@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --background-color: #050A30;
+    --secondaryBackground-color: #171c48;
+    --font: #fff;
+    --purple: #828dff;
+    --teal: #24feee;
+}
+body{
+    background-color: var(--background-color);
+    color: var(--font);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 120px auto 0 auto;
+    max-width: 600px;
+}
+.first-section{
+    width: 100%;
+    padding: 30px;
+    border: 2px solid var(--purple);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+.first-section .frist-side{
+    width: 100%;
+}
+.first-section .headings{
+    width: 100%;
+}
+
+.first-section #do-numberBar{
+    width: 100%;
+    height: 10px;
+    background-color: var(--secondaryBackground-color);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.first-section #do-numberBar #did-numberBar{
+    width: 0%;
+    height: 10px;
+    background-color: var(--teal);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+.container .second-side #do-number{
+    width: 100px;
+    height: 100px;
+    background-color: var(--purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.container form {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.container input{
+    flex: 1;
+    padding: 15px;
+    background-color: var(--secondaryBackground-color);
+    border: 1px solid var(--purple);
+    border-radius: 10px;
+    outline: none;
+    color: var(--font);
+}
+.container .submit-button{
+    padding: 16px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--purple);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--purple);
+    color: var(--font);
+    font-size: 2rem;
+    font-weight: bold;
+    outline: none;
+}
+.task-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10PX;
+    margin-top: 30PX;
+    width: 100%;
+    list-style: none;
+}
+li{
+    display: flex;
+    justify-content: center;
+}
+.taskItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondaryBackground-color);
+    padding: 10PX;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+}
+.taskItem .task{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.taskItem .task input{
+    width: 20px;
+    height: 20px;
+}
+.task input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: var(--teal);
+}
+.taskItem .icons .fa-pen-to-square{
+    font-size: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.taskItem .icons .fa-trash-can{
+    font-size: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+}
